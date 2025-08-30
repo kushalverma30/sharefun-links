@@ -40,14 +40,12 @@
       // Get the room token from URL
       const token = getQueryValue("token");
 
-      // Build your custom app URL
-      let appUrl = "sharefun://room";
-      if (token) {
-        appUrl += "?token=" + encodeURIComponent(token);
-      }
+   let appUrl = "sharefun://room";
+if (token) {
+  appUrl += "?token=" + encodeURIComponent(token);
+}
+window.location.href = appUrl;
 
-      // Try to open the locally installed app
-      window.location.href = appUrl;
 
       // Fallback: stay on this page (or you could redirect to a Play Store link)
       setTimeout(function () {
